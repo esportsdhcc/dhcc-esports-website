@@ -13,17 +13,16 @@ const Footer = () => {
   ];
 
   const contactInfo = [
-    { label: 'Meeting Times', value: 'Every Friday 4:00 PM - 8:00 PM', icon: Calendar },
-    { label: 'Location', value: 'D.H. Chen College Computer Lab', icon: MapPin },
-    { label: 'Email', value: 'esports@dhchen.edu', icon: Mail },
-    { label: 'Phone', value: '+1 (555) 123-GAME', icon: Phone },
+    { label: 'Meeting Times', value: 'Almost Every Friday 7:00 PM - 10:30 PM', icon: Calendar },
+    { label: 'Location', value: 'Games Room (1st floor)', icon: MapPin },
+    { label: 'Email', value: 'esports.dhcc@gmail.com', icon: Mail },
   ];
 
   const socialLinks = [
-    { name: 'Facebook', icon: Facebook, href: '#' },
-    { name: 'Twitter', icon: Twitter, href: '#' },
-    { name: 'Instagram', icon: Instagram, href: '#' },
-    { name: 'YouTube', icon: Youtube, href: '#' },
+    // { name: 'Facebook', icon: Facebook, href: '#' },
+    // { name: 'Twitter', icon: Twitter, href: '#' },
+    // { name: 'Instagram', icon: Instagram, href: '#' },
+    // { name: 'YouTube', icon: Youtube, href: '#' },
   ];
 
   return (
@@ -39,12 +38,12 @@ const Footer = () => {
                 className="h-10 w-10"
               />
               <div className="font-orbitron font-bold text-lg text-glow-blue">
-                DHC E-SPORTS
+                DHCC E-SPORTS
               </div>
             </div>
             <p className="text-muted-foreground text-sm">
-              The premier e-sports club at D.H. Chen College. Join us for competitive gaming, 
-              tournaments, and an amazing community of gamers.
+              The premier e-sports club at D.H. Chen College. Join us for competitive,casual, and fun gaming sessions, 
+              tournaments, and become part of an amazing community of gamers.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => {
@@ -106,33 +105,13 @@ const Footer = () => {
               })}
             </ul>
           </div>
-
-          {/* Newsletter */}
-          <div className="space-y-4">
-            <h3 className="font-orbitron font-bold text-lg text-gaming-purple">
-              Stay Updated
-            </h3>
-            <p className="text-muted-foreground text-sm">
-              Get the latest updates on tournaments, events, and club news.
-            </p>
-            <div className="space-y-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full px-4 py-2 bg-muted/50 border border-primary/20 rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary focus:shadow-glow-blue transition-all duration-300"
-              />
-              <button className="w-full btn-cyber text-sm">
-                Subscribe
-              </button>
-            </div>
-          </div>
         </div>
-
+          
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-primary/20">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-muted-foreground">
-              © {currentYear} D.H. Chen College E-Sports Club. All rights reserved.
+              © {currentYear} D.H. Chen College E-Sports Club. All rights reserved | Website by: <a href="https://www.shahabai.com" className="hover:text-primary transition-colors">M. Shahab Hasan</a>
             </div>
             <div className="flex space-x-6 text-sm text-muted-foreground">
               <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>

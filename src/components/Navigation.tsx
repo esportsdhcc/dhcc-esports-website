@@ -12,9 +12,8 @@ const Navigation = () => {
     { name: 'About', href: '/about', icon: Info },
     { name: 'Games', href: '/games', icon: Gamepad2 },
     { name: 'Tournaments', href: '/tournaments', icon: Trophy },
-    { name: 'Game Masters', href: '/masters', icon: Users },
     { name: 'Join Us', href: '/join', icon: Users },
-    { name: 'Contact', href: '/contact', icon: Phone },
+    { name: 'Game Masters & Contact', href: '/masters', icon: Users },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -31,7 +30,7 @@ const Navigation = () => {
               className="h-10 w-10 transition-all duration-300 group-hover:drop-shadow-[var(--glow-blue)]"
             />
             <div className="font-orbitron font-bold text-lg text-glow-blue">
-              DHC E-SPORTS
+              DHCC E-SPORTS
             </div>
           </Link>
 

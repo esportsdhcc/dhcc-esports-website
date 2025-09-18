@@ -5,30 +5,30 @@ import heroImage from '@/assets/hero-esports.jpg';
 
 const Index = () => {
   const stats = [
-    { icon: Users, label: 'Active Members', value: '150+', color: 'text-primary' },
-    { icon: Trophy, label: 'Tournaments Won', value: '45', color: 'text-secondary' },
-    { icon: Gamepad2, label: 'Games Played', value: '12+', color: 'text-accent' },
-    { icon: Star, label: 'Championships', value: '8', color: 'text-gaming-purple' },
+    { icon: Users, label: 'Active Members', value: '50+', color: 'text-primary' },
+    { icon: Trophy, label: 'Tournaments Hosted', value: '5', color: 'text-secondary' },
+    { icon: Gamepad2, label: 'Games Offered', value: '15+', color: 'text-accent' },
+    { icon: Star, label: 'Years Strong', value: '4', color: 'text-gaming-purple' },
   ];
 
   const featuredNews = [
     {
-      title: 'Regional FIFA Championship 2024',
-      date: 'March 15, 2024',
-      excerpt: 'Our FIFA team secured first place in the regional championship!',
+      title: 'DHCC Semester 1 FIFA Tournament',
+      date: 'TBA',
+      excerpt: 'Our FIFA team secured first place in the DHCC semester 1 FIFA tournament!',
       category: 'Tournament',
     },
     {
-      title: 'New Call of Duty Season Begins',
-      date: 'March 10, 2024',
-      excerpt: 'Registration now open for the upcoming Call of Duty tournament series.',
-      category: 'Registration',
+      title: '2025/2026 DHCC E-Sports Club Founded',
+      date: 'September 15, 2025',
+      excerpt: 'DHCC E-Sports Club: We are back and stronger than ever!',
+      category: 'Club News',
     },
     {
-      title: 'Welcome New Game Masters',
-      date: 'March 5, 2024',
-      excerpt: 'Introducing our newest game masters who will lead competitive teams.',
-      category: 'Club News',
+      title: 'EA FC24 (FIFA) Tournament',
+      date: 'November 9, 2024',
+      excerpt: 'Season-ending FIFA tournament with thrilling knockout rounds. Winner: Farhan, Osama, Solankar',
+      category: 'Tournament',
     },
   ];
 
@@ -49,18 +49,21 @@ const Index = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="font-orbitron font-black text-5xl md:text-7xl lg:text-8xl">
-                <span className="text-glow-blue">DHC</span>
+                <span className="text-glow-blue">DHCC</span>
                 <br />
                 <span className="text-glow-green">E-SPORTS</span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-                Welcome to the premier gaming community at D.H. Chen College. 
-                Where legends are born and champions rise.
+                Welcome to the premier gaming community at D.H. Chen College.
+              </p>
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+              Feel the thrill. Hear the roar. Join the action.
+                <br />
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/join" className="btn-cyber inline-flex items-center">
+              <Link to="/join" className="btn-cyber inline-flex items-center from-primary to-primary shadow-glow-blue hover:shadow-glow-blue">
                 Join the Club
                 <ChevronRight className="ml-2 h-5 w-5" />
               </Link>
@@ -117,7 +120,7 @@ const Index = () => {
               </h2>
               <p className="text-lg text-muted-foreground">
                 At D.H. Chen College E-Sports Club, we're more than just gamers – we're a 
-                family united by our passion for competitive gaming. From casual matches to 
+                family united by our passion for gaming. From casual matches to 
                 professional tournaments, we provide the platform for every skill level.
               </p>
               <div className="space-y-4">
@@ -145,28 +148,28 @@ const Index = () => {
                 <Gamepad2 className="h-8 w-8 text-primary" />
                 <h3 className="font-orbitron font-bold">12+ Games</h3>
                 <p className="text-sm text-muted-foreground">
-                  From FIFA to Call of Duty, we compete in all major e-sports titles.
+                  From FIFA to Mortal Kombat, we host all major titles.
                 </p>
               </div>
               <div className="card-neon space-y-3">
                 <Trophy className="h-8 w-8 text-secondary" />
-                <h3 className="font-orbitron font-bold">Weekly Tournaments</h3>
+                <h3 className="font-orbitron font-bold">Tournaments</h3>
                 <p className="text-sm text-muted-foreground">
-                  Regular competitions with prizes and rankings.
+                  Competitions with food and prizes.
                 </p>
               </div>
               <div className="card-neon space-y-3">
                 <Users className="h-8 w-8 text-secondary" />
-                <h3 className="font-orbitron font-bold">Team Training</h3>
+                <h3 className="font-orbitron font-bold">Weekly Sessions</h3>
                 <p className="text-sm text-muted-foreground">
-                  Professional coaching and team strategy sessions.
+                  Casual gaming sessions with friends.
                 </p>
               </div>
               <div className="card-cyber space-y-3">
                 <Star className="h-8 w-8 text-primary" />
-                <h3 className="font-orbitron font-bold">Championship Level</h3>
+                <h3 className="font-orbitron font-bold">For All Skill Levels</h3>
                 <p className="text-sm text-muted-foreground">
-                  Compete at regional and national tournaments.
+                  We welcome all skill levels.
                 </p>
               </div>
             </div>

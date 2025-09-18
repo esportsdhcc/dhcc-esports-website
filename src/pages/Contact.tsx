@@ -20,7 +20,7 @@ const Contact = () => {
     {
       icon: MessageCircle,
       title: 'Discord',
-      value: 'DHC E-Sports Server',
+      value: 'DHCC E-Sports Server',
       description: 'Join our active gaming community chat',
       color: 'accent',
     },
@@ -143,7 +143,7 @@ const Contact = () => {
               </h2>
               <p className="text-lg text-muted-foreground">
                 Come experience our gaming setup firsthand. Meet our members, try out our equipment, 
-                and see if DHC E-Sports is the right fit for you.
+                and see if DHCC E-Sports is the right fit for you.
               </p>
               
               <div className="space-y-4">
@@ -276,7 +276,7 @@ const Contact = () => {
                 <textarea
                   rows={6}
                   className="w-full px-4 py-3 bg-muted/50 border border-primary/20 rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary focus:shadow-glow-blue transition-all duration-300 resize-none"
-                  placeholder="Tell us about your interest in joining DHC E-Sports, your gaming experience, or any questions you have..."
+                  placeholder="Tell us about your interest in joining DHCC E-Sports, your gaming experience, or any questions you have..."
                 ></textarea>
               </div>
 
@@ -340,7 +340,7 @@ const Contact = () => {
               Follow Our Journey
             </h2>
             <p className="text-lg text-muted-foreground">
-              Stay connected and never miss an update from the DHC E-Sports community
+              Stay connected and never miss an update from the DHCC E-Sports community
             </p>
             
             <div className="flex justify-center space-x-6">

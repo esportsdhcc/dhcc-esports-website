@@ -30,12 +30,10 @@ const About = () => {
   ];
 
   const milestones = [
-    { year: '2019', event: 'Club Founded', description: 'DHC E-Sports Club was established' },
-    { year: '2020', event: 'First Tournament Win', description: 'Won regional FIFA championship' },
-    { year: '2021', event: 'Facility Upgrade', description: 'New gaming lab with 30 high-end PCs' },
-    { year: '2022', event: 'National Recognition', description: 'Qualified for national e-sports league' },
-    { year: '2023', event: '100+ Members', description: 'Reached milestone of 100 active members' },
-    { year: '2024', event: 'Championship Series', description: 'Hosting inter-college championship' },
+    { year: '2022', event: 'First E-Sports Club in HKU Student Colleges', description: 'We started at JCSV3' },
+    { year: '2023', event: 'First Tournament', description: 'Hosted the first Major E-Sports Tournament in HKU Student Colleges with 30 participants' },
+    { year: '2024', event: 'Intercollege Tournament', description: 'Hosted the first Intercollege E-Sports Tournament in HKU Student Colleges with 50 participants' },
+    { year: '2025', event: 'DHCC E-Sports Club Founded', description: 'DHCC E-Sports Club was founded to build upon the success of the previous club' },
   ];
 
   return (
@@ -45,7 +43,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-orbitron font-black text-5xl md:text-6xl mb-6">
             <span className="text-glow-blue">About</span>{' '}
-            <span className="text-glow-green">DHC E-Sports</span>
+            <span className="text-glow-green">DHCC E-Sports</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             We are the premier e-sports community at D.H. Chen College, dedicated to 
@@ -81,13 +79,12 @@ const About = () => {
                 <h3 className="font-orbitron font-bold text-2xl text-glow-green">Our Vision</h3>
               </div>
               <p className="text-muted-foreground mb-4">
-                To be recognized as the leading collegiate e-sports program, producing 
-                champions who excel both in gaming and in life.
+                To show others, gaming is not just a hobby, but a way of life.
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-sm">Foster competitive excellence</span>
+                  <span className="text-sm">Foster competitive excellence and teamwork</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-secondary rounded-full"></div>
@@ -95,7 +92,7 @@ const About = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-accent rounded-full"></div>
-                  <span className="text-sm">Develop future gaming leaders</span>
+                  <span className="text-sm">Have fun and make friends</span>
                 </div>
               </div>
             </div>
@@ -188,19 +185,19 @@ const About = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center space-y-2">
-              <div className="font-orbitron font-bold text-4xl text-primary">150+</div>
+              <div className="font-orbitron font-bold text-4xl text-primary">50+</div>
               <div className="text-muted-foreground">Active Members</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="font-orbitron font-bold text-4xl text-secondary">45</div>
-              <div className="text-muted-foreground">Tournament Wins</div>
+              <div className="font-orbitron font-bold text-4xl text-secondary">5</div>
+              <div className="text-muted-foreground">Tournaments Hosted</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="font-orbitron font-bold text-4xl text-accent">12+</div>
-              <div className="text-muted-foreground">Games Played</div>
+              <div className="font-orbitron font-bold text-4xl text-accent">15+</div>
+              <div className="text-muted-foreground">Games Offered</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="font-orbitron font-bold text-4xl text-gaming-purple">5</div>
+              <div className="font-orbitron font-bold text-4xl text-gaming-purple">4</div>
               <div className="text-muted-foreground">Years Strong</div>
             </div>
           </div>

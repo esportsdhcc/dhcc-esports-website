@@ -1,143 +1,73 @@
-import { Trophy, Users, Target, Clock, Star, Gamepad2 } from 'lucide-react';
 import Layout from '@/components/Layout';
+import { useState } from 'react';
 
 const Games = () => {
   const games = [
     {
-      name: 'FIFA 24',
+      name: 'EA FC (25)',
       category: 'Sports',
-      players: '1v1 & 2v2',
-      skill: 'All Levels',
-      tournaments: 'Weekly',
-      description: 'Experience the beautiful game with realistic gameplay and stunning graphics. Compete in our weekly FIFA tournaments.',
-      features: ['Ultimate Team', 'Career Mode', 'Online Seasons', 'Pro Clubs'],
       color: 'from-primary to-secondary',
       icon: '⚽',
+      image: 'https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000074799/ab3989c5c208683e007deb3327a1ce70a8fa6cb38b06cfb8c2c80d563b19cfc7',
     },
     {
-      name: 'Call of Duty: Modern Warfare III',
+      name: 'Call of Duty',
       category: 'FPS',
-      players: '6v6 Teams',
-      skill: 'Intermediate+',
-      tournaments: 'Bi-weekly',
-      description: 'Tactical first-person shooter requiring strategy, teamwork, and quick reflexes. Join our competitive teams.',
-      features: ['Search & Destroy', 'Domination', 'Team Deathmatch', 'Ranked Play'],
       color: 'from-accent to-gaming-purple',
       icon: '🔫',
+      image: 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1938090/06107605348820087bb51ca89ed620c22fe559aa/header.jpg?t=1756159653',
     },
     {
       name: 'Tekken 8',
       category: 'Fighting',
-      players: '1v1',
-      skill: 'All Levels',
-      tournaments: 'Monthly',
-      description: 'Master the art of martial arts combat in this legendary fighting game series.',
-      features: ['King of Iron Fist', 'Ranked Matches', 'Character Customization', 'Story Mode'],
       color: 'from-secondary to-primary',
       icon: '🥊',
+      image: 'https://gmedia.playstation.com/is/image/SIEPDC/tekken-8-keyart-01-en-15may23?$native$',
     },
     {
-      name: 'F1 24',
+      name: 'F1',
       category: 'Racing',
-      players: '1v1 & Teams',
-      skill: 'All Levels',
-      tournaments: 'Monthly',
-      description: 'Experience the thrill of Formula 1 racing with authentic tracks and realistic physics.',
-      features: ['Grand Prix', 'Time Trials', 'Career Mode', 'MyTeam'],
       color: 'from-gaming-purple to-accent',
       icon: '🏎️',
+      image: 'https://image.api.playstation.com/vulcan/ap/rnd/202505/1521/ca36c3ae7641a273ff3f00e63732fb76e2850c57f577d6eb.jpg',
     },
     {
-      name: 'WWE 2K24',
-      category: 'Sports Entertainment',
-      players: '1v1 & Royal Rumble',
-      skill: 'All Levels',
-      tournaments: 'Quarterly',
-      description: 'Step into the ring and experience the spectacle of professional wrestling.',
-      features: ['MyRise Career', 'Universe Mode', 'Creation Suite', 'Showcase'],
+      name: 'WWE 2K',
+      category: 'Sports',
       color: 'from-primary to-gaming-purple',
       icon: '🤼',
+      image: 'https://image.api.playstation.com/vulcan/ap/rnd/202509/0103/eadb20f655700ea983a3f8d015dfa14d41e8c7e4599aef5c.jpg',
     },
     {
-      name: 'League of Legends',
-      category: 'MOBA',
-      players: '5v5 Teams',
-      skill: 'Intermediate+',
-      tournaments: 'Seasonal',
-      description: 'Strategic multiplayer online battle arena requiring teamwork and tactical thinking.',
-      features: ['Ranked Solo/Duo', 'Flex Queue', 'ARAM', 'Tournament Draft'],
-      color: 'from-secondary to-accent',
-      icon: '⚔️',
-    },
-    {
-      name: 'Valorant',
-      category: 'Tactical FPS',
-      players: '5v5 Teams',
-      skill: 'All Levels',
-      tournaments: 'Weekly',
-      description: 'Character-based tactical shooter combining precise gunplay with unique agent abilities.',
-      features: ['Unrated', 'Competitive', 'Spike Rush', 'Deathmatch'],
-      color: 'from-accent to-primary',
-      icon: '🎯',
-    },
-    {
-      name: 'Rocket League',
-      category: 'Sports',
-      players: '3v3 Teams',
-      skill: 'All Levels',
-      tournaments: 'Monthly',
-      description: 'Soccer meets racing in this high-octane sports game that\'s easy to learn but hard to master.',
-      features: ['Casual', 'Competitive', 'Extra Modes', 'Training'],
+      name: 'Among Us',
+      category: 'Other',
       color: 'from-gaming-purple to-secondary',
-      icon: '🚗',
+      icon: '👥',
+      image: 'https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000036098/758ab0b61205081da2466386940752c70e0e5ea43bd39e8b9b13eaa455c69b7e',
     },
     {
-      name: 'Street Fighter 6',
+      name: 'Injustice 2',
       category: 'Fighting',
-      players: '1v1',
-      skill: 'All Levels',
-      tournaments: 'Monthly',
-      description: 'The legendary fighting game series returns with new mechanics and classic characters.',
-      features: ['World Tour', 'Fighting Ground', 'Battle Hub', 'Ranked Matches'],
       color: 'from-primary to-accent',
       icon: '👊',
+      image: 'https://gaming-cdn.com/images/products/1525/orig/injustice-2-pc-game-steam-cover.jpg?v=1705328637',
     },
     {
-      name: 'Overwatch 2',
-      category: 'Hero Shooter',
-      players: '5v5 Teams',
-      skill: 'All Levels',
-      tournaments: 'Bi-weekly',
-      description: 'Team-based multiplayer shooter featuring diverse heroes with unique abilities.',
-      features: ['Quick Play', 'Competitive', 'Arcade', 'Mystery Heroes'],
-      color: 'from-secondary to-gaming-purple',
-      icon: '🦸',
-    },
-    {
-      name: 'Apex Legends',
-      category: 'Battle Royale',
-      players: '3v3 Teams',
-      skill: 'All Levels',
-      tournaments: 'Weekly',
-      description: 'Fast-paced battle royale with unique character abilities and squad-based gameplay.',
-      features: ['Battle Royale', 'Arenas', 'Ranked', 'Control'],
-      color: 'from-accent to-secondary',
-      icon: '👑',
-    },
-    {
-      name: 'Mortal Kombat 1',
+      name: 'Mortal Kombat',
       category: 'Fighting',
-      players: '1v1',
-      skill: 'All Levels',
-      tournaments: 'Quarterly',
-      description: 'Brutal fighting game with iconic characters and legendary fatalities.',
-      features: ['Story Mode', 'Klassic Towers', 'Online', 'Krypt'],
       color: 'from-gaming-purple to-primary',
       icon: '💀',
+      image: 'https://cdn2.unrealengine.com/egs-mortalkombat1defintiveedition-netherrealmstudiosqloc-editions-g1a-00-1920x1080-4de805dffaf7.jpg',
     },
   ];
 
-  const categories = ['All', 'FPS', 'Sports', 'Fighting', 'Racing', 'MOBA', 'Battle Royale'];
+  const categories = ['All', 'FPS', 'Sports', 'Fighting', 'Racing', 'Other'];
+
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+
+  const filteredGames = selectedCategory === 'All'
+    ? games
+    : games.filter((game) => game.category === selectedCategory);
   
   return (
     <Layout>
@@ -149,8 +79,7 @@ const Games = () => {
             <span className="text-glow-green">We Play</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From competitive FPS to strategic MOBAs, we excel across multiple gaming genres. 
-            Join our teams and compete at the highest levels.
+            From competitive Sports Sims to Fighting, we host across multiple gaming genres. 
           </p>
         </div>
       </section>
@@ -159,14 +88,22 @@ const Games = () => {
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((category) => (
-              <button
-                key={category}
-                className="px-6 py-2 rounded-lg bg-muted/20 text-muted-foreground hover:bg-primary/20 hover:text-primary transition-all duration-300 hover:shadow-glow-blue"
-              >
-                {category}
-              </button>
-            ))}
+            {categories.map((category) => {
+              const isActive = selectedCategory === category;
+              return (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-6 py-2 rounded-lg transition-all duration-300 ${
+                    isActive
+                      ? 'bg-primary/20 text-primary shadow-glow-blue'
+                      : 'bg-muted/20 text-muted-foreground hover:bg-primary/20 hover:text-primary hover:shadow-glow-blue'
+                  }`}
+                >
+                  {category}
+                </button>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -175,7 +112,7 @@ const Games = () => {
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {games.map((game) => (
+            {filteredGames.map((game) => (
               <div key={game.name} className="card-cyber group hover:scale-105 transition-transform duration-300">
                 <div className="space-y-4">
                   {/* Game Header */}
@@ -190,112 +127,20 @@ const Games = () => {
                     <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${game.color}`}></div>
                   </div>
 
-                  {/* Game Info */}
-                  <div className="grid grid-cols-3 gap-4 text-center">
-                    <div className="space-y-1">
-                      <Users className="h-4 w-4 text-primary mx-auto" />
-                      <div className="text-xs text-muted-foreground">Players</div>
-                      <div className="text-sm font-medium">{game.players}</div>
-                    </div>
-                    <div className="space-y-1">
-                      <Target className="h-4 w-4 text-secondary mx-auto" />
-                      <div className="text-xs text-muted-foreground">Skill</div>
-                      <div className="text-sm font-medium">{game.skill}</div>
-                    </div>
-                    <div className="space-y-1">
-                      <Trophy className="h-4 w-4 text-accent mx-auto" />
-                      <div className="text-xs text-muted-foreground">Tournaments</div>
-                      <div className="text-sm font-medium">{game.tournaments}</div>
-                    </div>
+                  {/* Game Image */}
+                  <div className="relative w-full h-40 sm:h-48 overflow-hidden rounded-lg">
+                    <img
+                      src={game.image}
+                      alt={`${game.name} cover`}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
                   </div>
 
-                  {/* Description */}
-                  <p className="text-muted-foreground text-sm">{game.description}</p>
-
-                  {/* Features */}
-                  <div className="space-y-3">
-                    <h4 className="font-orbitron font-bold text-sm text-primary">Key Features:</h4>
-                    <div className="grid grid-cols-2 gap-2">
-                      {game.features.map((feature) => (
-                        <div key={feature} className="flex items-center space-x-2">
-                          <div className="w-1.5 h-1.5 bg-secondary rounded-full"></div>
-                          <span className="text-xs text-muted-foreground">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Action Button */}
-                  <button className="w-full btn-neon text-sm">
-                    Join {game.name} Team
-                  </button>
+                  
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Competition Levels */}
-      <section className="py-20 bg-muted/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-12">
-            <h2 className="font-orbitron font-bold text-4xl text-glow-green">
-              Competition Levels
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              We offer competitive opportunities for every skill level
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="card-cyber text-center space-y-4">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br from-secondary/20 to-primary/20">
-                <Star className="h-8 w-8 text-secondary" />
-              </div>
-              <h3 className="font-orbitron font-bold text-xl text-secondary">Casual</h3>
-              <p className="text-muted-foreground text-sm">
-                Perfect for beginners and those looking to have fun while learning the basics.
-              </p>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• No pressure environment</li>
-                <li>• Skill-building focus</li>
-                <li>• Community events</li>
-                <li>• Mentorship available</li>
-              </ul>
-            </div>
-
-            <div className="card-cyber text-center space-y-4">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20">
-                <Target className="h-8 w-8 text-primary" />
-              </div>
-              <h3 className="font-orbitron font-bold text-xl text-primary">Competitive</h3>
-              <p className="text-muted-foreground text-sm">
-                For players ready to test their skills in structured tournaments and leagues.
-              </p>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• Regular tournaments</li>
-                <li>• Team formations</li>
-                <li>• Strategy sessions</li>
-                <li>• Performance tracking</li>
-              </ul>
-            </div>
-
-            <div className="card-cyber text-center space-y-4">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br from-accent/20 to-gaming-purple/20">
-                <Trophy className="h-8 w-8 text-accent" />
-              </div>
-              <h3 className="font-orbitron font-bold text-xl text-accent">Professional</h3>
-              <p className="text-muted-foreground text-sm">
-                Elite level competition with coaching, sponsorships, and championship opportunities.
-              </p>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• Professional coaching</li>
-                <li>• Sponsorship opportunities</li>
-                <li>• National competitions</li>
-                <li>• Scholarship potential</li>
-              </ul>
-            </div>
           </div>
         </div>
       </section>
