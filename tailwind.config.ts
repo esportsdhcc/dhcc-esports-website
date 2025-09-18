@@ -57,6 +57,26 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "gaming-purple": {
+          DEFAULT: "hsl(var(--gaming-purple))",
+          foreground: "hsl(var(--gaming-purple-foreground))",
+        },
+      },
+      fontFamily: {
+        orbitron: ['Orbitron', 'monospace'],
+        rajdhani: ['Rajdhani', 'sans-serif'],
+      },
+      backgroundImage: {
+        'cyber-gradient': 'var(--gradient-cyber)',
+        'neon-gradient': 'var(--gradient-neon)',
+        'gaming-gradient': 'var(--gradient-gaming)',
+        'dark-gradient': 'var(--gradient-dark)',
+      },
+      boxShadow: {
+        'glow-blue': 'var(--glow-blue)',
+        'glow-green': 'var(--glow-green)',
+        'glow-pink': 'var(--glow-pink)',
+        'glow-purple': 'var(--glow-purple)',
       },
       borderRadius: {
         lg: "var(--radius)",
