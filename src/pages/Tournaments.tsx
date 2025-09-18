@@ -24,7 +24,7 @@ const Tournaments = () => {
       time: '5:00 PM - 10:00 PM',
       location: 'JCSV3',
       description: 'Season-ending FIFA tournament with thrilling knockout rounds.',
-      image: "https://raw.githubusercontent.com/esportsdhcc/dhcc-esports-website/refs/heads/main/src/assets/eafc24.png?token=GHSAT0AAAAAADLN6PMHX3BXPZYQ6XKGYWVA2GMGINQ",
+      image: "https://github.com/esportsdhcc/dhcc-esports-website/blob/main/src/assets/eafc24.png?raw=true",
     },
     {
       tournament: 'Tekken 8 Tournament',
