@@ -24,7 +24,7 @@ const Tournaments = () => {
       time: '5:00 PM - 10:00 PM',
       location: 'JCSV3',
       description: 'Season-ending FIFA tournament with thrilling knockout rounds.',
-      image: "src/assets/eafc24.png",
+      image: "https://raw.githubusercontent.com/esportsdhcc/dhcc-esports-website/refs/heads/main/src/assets/eafc24.png?token=GHSAT0AAAAAADLN6PMHX3BXPZYQ6XKGYWVA2GMGINQ",
     },
     {
       tournament: 'Tekken 8 Tournament',
@@ -42,7 +42,7 @@ const Tournaments = () => {
       time: '5:00 PM - 10:00 PM',
       location: 'JCSV3',
       description: 'Crowning the combo king in a packed fight night.',
-      image: "src/assets/fifa23.png",
+      image: "https://github.com/esportsdhcc/dhcc-esports-website/blob/main/src/assets/fifa23.png?raw=true",
     },
     {
       tournament: 'FIFA Tournament 2v2',
@@ -51,7 +51,7 @@ const Tournaments = () => {
       time: '5:00 PM - 11:00 PM',
       location: 'JCSV3',
       description: 'Crowning the combo king in a packed FIFA tournament.',
-      image: "src/assets/fifa22.png",
+      image: "https://github.com/esportsdhcc/dhcc-esports-website/blob/main/src/assets/fifa22.png?raw=true",
     }
   ];
 
